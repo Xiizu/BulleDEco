@@ -1,0 +1,66 @@
+/* STYLES PC */
+/* ================================================= */
+/* ================================================= */
+/* HEADER */
+/* ================================================= */
+/* Global */
+header {
+    background-color: #f8f9fa;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+}
+/* Partie droite */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #E1982A;
+}
+.logo img {
+    width: 65px;
+    border: 2px solid #E1982A;
+    border-radius: 50%;
+}
+/* Partie gauche */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.nav-links li a {
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid #E1982A;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    color: #E1982A;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.nav-links li a:hover {
+    background-color: #e1982a34;
+    transform: scale(1.2) translate(-5px,-3px);
+}
+/* ================================================= */
+/* FOOTER */
+/* ================================================= */
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}

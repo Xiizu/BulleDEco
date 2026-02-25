@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Bulle D'Eco{% endblock %}</title>
+    <link rel="icon" href="{% static 'pages/images/logo-white-rounded.ico' %}">
+    <link rel="stylesheet" href="{% static 'pages/style.css' %}">
+</head>
+<body>
+    {% include 'pages/partials/header.html' %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    {% include 'pages/partials/footer.html' %}
+</body>
+</html>
