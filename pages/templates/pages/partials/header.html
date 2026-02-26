@@ -1,12 +1,14 @@
 {% load static %}
 <header>
-    <nav>
+    <nav class="container">
         <a href="/" class="logo">
             <img src="{% static 'pages/images/logo-white-rounded.ico' %}" alt="Logo Bulle D'Eco">
-            <h1 class="title">Bulle D'Eco</h1>
+            <h1 class="title">Bulle d'éco</h1>
         </a>
         <ul class="nav-links">
             <li><a href="/">Accueil</a></li>
+            <li><a href="/#prestations">Prestations</a></li>
+            <li><a href="{% url 'dabro' %}">Dabro Concept</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
     </nav>

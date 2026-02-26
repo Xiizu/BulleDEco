@@ -1,0 +1,68 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block title %}Contact - Bulle d'éco{% endblock %}
+
+{% block content %}
+<section class="contact-section container">
+    <h2>Contactez-moi</h2>
+    <div class="contact-container">
+        
+        <!-- Informations de contact -->
+        <div class="contact-info">
+            <h3>Discutons de votre projet !</h3>
+            <p>Vous souhaitez échanger sur vos envies de décoration, réserver une Bulle Conseil ou obtenir plus d'informations sur les Décos d'Axelle ? N'hésitez pas à m'envoyer un message.</p>
+            <ul class="contact-details">
+                <li><strong>Téléphone :</strong> 06 16 91 36 66</li>
+                <li><strong>Email :</strong> bulledeco17@gmail.com</li>
+                <li><strong>Adresse :</strong> 3 rue des Boguets, 17600 NIEULLE SUR SEUDRE</li>
+            </ul>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="contact-form-wrapper">
+            {% if messages %}
+                <div class="messages-container">
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}" style="padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; text-align: center; background-color: #BEEBD1; color: #1e4b31; border: 1px solid #6ABB8D; font-weight: bold;">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <form action="{% url 'contact' %}" method="POST" class="contact-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Nom / Prénom</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom complet">
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse Email</label>
+                    <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Sujet de votre demande</label>
+                    <select id="subject" name="subject" required>
+                        <!-- <option value="" disabled selected>Choisissez un sujet...</option>
+                        <option value="conseil">Bulle Conseil</option>
+                        <option value="travaux">Bulle Travaux</option>
+                        <option value="axelle">Matériaux / Dabro Concept</option>
+                        <option value="autre">Autre demande</option> -->
+                        <option value="" disabled {% if not request.GET.subject %}selected{% endif %}>Choisissez un sujet...</option>
+                        <option value="conseil" {% if request.GET.subject == 'conseil' %}selected{% endif %}>Bulle Conseil</option>
+                        <option value="travaux" {% if request.GET.subject == 'travaux' %}selected{% endif %}>Bulle Travaux</option>
+                        <option value="dabro" {% if request.GET.subject == 'dabro' %}selected{% endif %}>Matériaux / Dabro Concept</option>
+                        <option value="autre" {% if request.GET.subject == 'autre' %}selected{% endif %}>Autre demande</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre Message</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre projet ou posez vos questions...">{{ request.GET.message }}</textarea>
+                </div>
+                <button type="submit" class="btn-primary btn-submit">Envoyer le message</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

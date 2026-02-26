@@ -1,19 +1,32 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Bulle D'Eco{% endblock %}</title>
-    <link rel="icon" href="{% static 'pages/images/logo-white-rounded.ico' %}">
-    <link rel="stylesheet" href="{% static 'pages/style.css' %}">
-</head>
-<body>
-    {% include 'pages/partials/header.html' %}
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Bulle D'Eco{% endblock %}</title>
+        <link rel="icon" href="{% static 'pages/images/logo-white-rounded.ico' %}">
+        <link rel="stylesheet" href="{% static 'pages/style.css' %}">
+    </head>
+    <body>
+        {% include 'pages/partials/header.html' %}
 
-    <main>
-        {% block content %}{% endblock %}
-    </main>
-    
-    {% include 'pages/partials/footer.html' %}
-</body>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        
+        {% include 'pages/partials/footer.html' %}
+        <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Remonter en haut">
+            &#8679;
+        </button>
+        <script>
+            window.addEventListener('scroll', function() {
+                const scrollBtn = document.getElementById("scrollTopBtn");
+                if (window.scrollY > 300) {
+                    scrollBtn.classList.add("show");
+                } else {
+                    scrollBtn.classList.remove("show");
+                }
+            });
+        </script>
+    </body>
 </html>

@@ -1,0 +1,78 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block title %}Dabro Concept - Matériaux Écoresponsables{% endblock %}
+
+{% block content %}
+    <!-- HERO SECTION -->
+    <section class="hero" style="background: linear-gradient(135deg, var(--clr-light-green) 0%, var(--clr-light-blue) 100%);">
+        <div class="hero-content container">
+            <h1>La matière au cœur du projet</h1>
+            <p class="subtitle">Nouveauté 2026 : Vente de matériaux écoresponsables</p>
+            <p>J’élargis mon accompagnement avec la vente de matériaux durables pour la décoration intérieure. Je sélectionne pour vous des solutions saines, esthétiques et respectueuses de l’environnement. Cette évolution me permet de vous proposer une approche encore plus cohérente : concevoir, conseiller et fournir des matériaux alignés avec mes valeurs.</p>
+        </div>
+    </section>
+
+    <!-- SECTION STONAT -->
+    <section class="eco-section container">
+        <div class="eco-text">
+            <h2>Enduits STONAT : naturel et décoratif</h2>
+            <p>Dans une démarche écoresponsable, je sélectionne les enduits STONAT pour leurs qualités esthétiques, techniques et environnementales. Composés majoritairement d’éléments naturels comme la chaux ou l’argile, ils offrent une alternative saine aux revêtements classiques.</p>
+            <ul>
+                <li>✔ Revêtement mural écologique adapté aux rénovations durables</li>
+                <li>✔ Finition type béton ciré naturel, tadelakt ou aspect minéral</li>
+                <li>✔ Matériau respirant favorisant le confort thermique</li>
+                <li>✔ Solution durable, adaptée aux murs, sols et pièces d’eau</li>
+            </ul>
+        </div>
+        <div class="eco-image">
+            <div class="image-placeholder"><img src="{% static 'pages/images/enduit-stonat.jpg' %}" alt="Image de mur en enduit STONAT" loading="lazy"></div>
+        </div>
+    </section>
+
+    <!-- SECTION BAMBOU -->
+    <section class="eco-section container flex-row-reverse" style="background-color: var(--clr-bg); padding-top: 0;">
+        <div class="eco-image">
+            <div class="image-placeholder"><img src="{% static 'pages/images/parquet-bambou.jpg' %}" alt="Image de parquet en bambou design" loading="lazy"></div>
+        </div>
+        <div class="eco-text">
+            <h2>Parquet en bambou : durable et design</h2>
+            <p>Le bambou est une ressource naturelle à croissance rapide, idéale pour un projet d’aménagement intérieur durable. Le parquet bambou haute densité offre une excellente résistance (usure, chocs) et une grande stabilité.</p>
+            <ul>
+                <li>🌱 <strong>Durable :</strong> Se régénère rapidement après la coupe.</li>
+                <li>💪 <strong>Résistant :</strong> Adapté aux pièces de vie et zones de passage.</li>
+                <li>✨ <strong>Design :</strong> Rendu élégant, contemporain et chaleureux.</li>
+                <li>🌬️ <strong>Sain :</strong> Faibles émissions de COV pour la qualité de l'air.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- GRILLE AUTRES MATERIAUX -->
+    <section class="services-section container bg-light-green" style="border-radius: 15px; margin-bottom: 4rem;">
+        <h2>D'autres solutions saines pour votre intérieur</h2>
+        <div class="grid-services">
+            <div class="service-card border-orange">
+                <h3>Sol en liège naturel</h3>
+                <p>Issu de l’écorce du chêne-liège, il offre un confort de marche exceptionnel et une isolation thermique et acoustique naturelle. Idéal pour les chambres et pièces de vie.</p>
+            </div>
+            <div class="service-card border-green">
+                <h3>Peintures naturelles</h3>
+                <p>À faible émission de COV, elles préservent la qualité de l’air intérieur. Une alternative saine aux peintures classiques avec des teintes naturelles et profondes.</p>
+            </div>
+            <div class="service-card border-orange">
+                <h3>Papiers peints recyclés</h3>
+                <p>Des revêtements muraux en papier recyclé pour une solution décorative responsable et tendance, réduisant l'impact environnemental.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION SHOWROOM -->
+    <section class="axelle-section bg-light-blue">
+        <div class="container text-center">
+            <h2>Dabro Concept – Le Château d’Oléron</h2>
+            <p style="max-width: 800px; margin: 0 auto 2rem auto;">Avec la boutique Dabro Concept, je vous propose un conseil personnalisé en décoration durable, la vente de matériaux écologiques, un accompagnement rénovation en Charente-Maritime et la mise en relation avec des artisans locaux.</p>
+            <a href="{% url 'contact' %}" class="btn-primary">Me contacter pour vos matériaux</a>
+            <a href="http://dabroconcept.fr/" class="btn-primary" target="_blank">Consulter le site de Dabro Concept</a>
+        </div>
+    </section>
+{% endblock %}
