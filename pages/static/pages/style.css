@@ -273,6 +273,10 @@ nav {
     border-top: 5px solid var(--clr-orange);
 }
 
+.service-card.border-blue { 
+    border-top: 5px solid var(--clr-light-blue); 
+}
+
 .service-card ul {
     margin: 1rem 0;
     padding-left: 1.5rem;

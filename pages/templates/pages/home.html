@@ -18,7 +18,7 @@
     <section class="eco-section container">
         <div class="eco-text">
             <h2>Une décoration écoresponsable</h2>
-            <p>Parce qu'il est important de pouvoir se ressourcer et se sentir bien chez soi, je propose une décoration qui allie récup', DIY et respect de l'environnement !</p>
+            <p>Parce qu'il est important de pouvoir se ressourcer et se sentir bien chez soi, je vous propose une décoration qui allie récup, DIY et respect de l'environnement !</p>
             <p>Je vous oriente vers des matériaux naturels, biosourcés, recyclés, sans COV et sans solvants si possible.</p>
         </div>
         <div class="eco-image">
@@ -50,7 +50,7 @@
                             <img class="slide" src="{% static 'pages/images/avant_apres/avt_apr_cuisine_random.jpg' %}" alt="Image Projet Avant/Après" loading="lazy">
                         </div>
                     </div>
-                    <h3>Transformation Avant/Apès</h3>
+                    <h3>Transformation Avant/Après</h3>
                 </div>
                 <div class="project-card">
                     <div class="image-placeholder">
@@ -98,6 +98,20 @@
     <section id="prestations" class="services-section container">
         <h2>Mes Formules</h2>
         <div class="grid-services">
+            <div class="service-card border-blue" 
+                onclick="window.location.href=`{% url 'contact' %}?subject=conseil&message=Bonjour Gwladys,%0A%0AJe souhaiterais réserver une prestation Bulle Coaching. Voici mon projet :`" 
+                title="Cliquez pour réserver">
+                <h3>Bulle Coaching</h3>
+                <p>Evaluations et conseils déco en visio ou à domicile.</p>
+                <ul>
+                    <li>Echange en présentiel ou en visio sur votre projet</li>
+                    <li>Conseils et idées personnalisés</li>
+                    <li>Suivi du projet jusqu'à la réalisation</li>
+                </ul>
+                <p class="note">A partir de</p>
+                <p class="price">60€ TTC / heure</p>
+            </div>
+
             <div class="service-card border-green" 
                 onclick="window.location.href=`{% url 'contact' %}?subject=conseil&message=Bonjour Gwladys,%0A%0AJe souhaiterais réserver une prestation Bulle Conseil. Voici mon projet :`" 
                 title="Cliquez pour réserver">
@@ -107,7 +121,7 @@
                     <li>Réalisation d'une planche tendance</li>
                     <li>Visuel 3D pour une pièce de 20m² max</li>
                 </ul>
-                <p class="price">270€ TTC</p>
+                <p class="price">310€ TTC</p>
                 <p class="note">Au-delà de 20m² : +12€ par m² supplémentaire.</p>
             </div>
             
@@ -119,7 +133,7 @@
                     <li>Planche tendance et plan 3D</li>
                     <li>Accompagnement des travaux avec les artisans</li>
                 </ul>
-                <p class="price">50€ / m²</p>
+                <p class="price">55€ / m²</p>
             </div>
         </div>
     </section>
@@ -131,6 +145,7 @@
                 <h2>Nouveauté 2026 : Mise en lumière & Domotique</h2>
                 <p>J'élargis mon accompagnement en collaborant avec la boutique <strong>Dabro Concept</strong> au Château d'Oléron, experte en électricité générale et conception d'éclairage.</p>
                 <p>Sélection de luminaires haut de gamme, création d'ambiances lumineuses sur-mesure et solutions domotiques... Nous allions décoration et expertise technique pour sublimer votre intérieur.</p>
+                <p>Dabro Concept propose également la pose de panneaux solaires et bornes de recharge électrique.</p>
                 <a href="http://dabroconcept.fr/" class="btn-primary" target="_blank">Consulter le site de Dabro Concept</a>
             </div>
             <div class="dabro-image">
