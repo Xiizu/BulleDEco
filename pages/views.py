@@ -29,3 +29,4 @@ def admin_dashboard_redirect(request):
 
 def materiaux(request):
     return render(request, 'pages/materiaux.html')
+    

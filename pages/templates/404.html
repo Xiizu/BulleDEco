@@ -1,0 +1,19 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block title %}Page introuvable - Bulle d'éco{% endblock %}
+
+{% block content %}
+<section class="container text-center" style="padding: 10vh 2rem; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    
+    <h1 style="font-size: 8rem; color: var(--clr-green); margin-bottom: -1rem;">404</h1>
+    <h2 class="accent-title" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Oups, cette pièce est en travaux !</h2>
+    
+    <p style="font-size: 1.2rem; color: var(--clr-text); margin-bottom: 2rem; max-width: 600px;">
+        La page que vous recherchez semble avoir été redécorée, déplacée, ou n'a peut-être jamais existé.
+    </p>
+    
+    <a href="/" class="btn-primary">Retour à l'accueil</a>
+
+</section>
+{% endblock %}
