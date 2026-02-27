@@ -29,4 +29,6 @@ def admin_dashboard_redirect(request):
 
 def materiaux(request):
     return render(request, 'pages/materiaux.html')
-    
+
+def gallery(request):
+    return render(request, 'pages/gallery.html')

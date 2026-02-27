@@ -18,6 +18,9 @@
         <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Remonter en haut">
             &#8679;
         </button>
+        <div id="lightbox">
+            <img id="lightbox-img" src="" alt="Image agrandie">
+        </div>
         <script>
             window.addEventListener('scroll', function() {
                 const scrollBtn = document.getElementById("scrollTopBtn");
@@ -27,7 +30,7 @@
                     scrollBtn.classList.remove("show");
                 }
             });
-            
+
             document.addEventListener("DOMContentLoaded", function() {
                 const sliders = document.querySelectorAll('.auto-slider');
                 sliders.forEach(slider => {
@@ -40,6 +43,20 @@
                             slides[currentIndex].classList.add('active');
                         }, 5000);
                     }
+                });
+
+                const lightbox = document.getElementById('lightbox');
+                const lightboxImg = document.getElementById('lightbox-img');
+                document.body.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('slide') && e.target.classList.contains('active')) {
+                        if (e.target.src) {
+                            lightboxImg.src = e.target.src;
+                            lightbox.classList.add('active');
+                        }
+                    }
+                });
+                lightbox.addEventListener('click', function() {
+                    lightbox.classList.remove('active');
                 });
             });
         </script>
