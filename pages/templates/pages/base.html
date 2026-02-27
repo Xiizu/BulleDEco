@@ -27,6 +27,21 @@
                     scrollBtn.classList.remove("show");
                 }
             });
+            
+            document.addEventListener("DOMContentLoaded", function() {
+                const sliders = document.querySelectorAll('.auto-slider');
+                sliders.forEach(slider => {
+                    const slides = slider.querySelectorAll('.slide');
+                    let currentIndex = 0;
+                    if(slides.length > 1) {
+                        setInterval(() => {
+                            slides[currentIndex].classList.remove('active');
+                            currentIndex = (currentIndex + 1) % slides.length;
+                            slides[currentIndex].classList.add('active');
+                        }, 5000);
+                    }
+                });
+            });
         </script>
     </body>
 </html>

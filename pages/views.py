@@ -27,5 +27,5 @@ def contact(request):
 def admin_dashboard_redirect(request):
     return redirect('admin:pages_contactmessage_changelist')
 
-def dabro(request):
-    return render(request, 'pages/dabro.html')
+def materiaux(request):
+    return render(request, 'pages/materiaux.html')

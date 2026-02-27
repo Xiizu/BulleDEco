@@ -11,7 +11,7 @@
         <!-- Informations de contact -->
         <div class="contact-info">
             <h3>Discutons de votre projet !</h3>
-            <p>Vous souhaitez échanger sur vos envies de décoration, réserver une Bulle Conseil ou obtenir plus d'informations sur les Décos d'Axelle ? N'hésitez pas à m'envoyer un message.</p>
+            <p>Vous souhaitez échanger sur vos envies de décoration, réserver une Bulle Conseil, vous renseigner sur les matériaux ou obtenir plus d'informations sur Dabro Concept ? N'hésitez pas à m'envoyer un message.</p>
             <ul class="contact-details">
                 <li><strong>Téléphone :</strong> 06 16 91 36 66</li>
                 <li><strong>Email :</strong> bulledeco17@gmail.com</li>
@@ -43,11 +43,6 @@
                 <div class="form-group">
                     <label for="subject">Sujet de votre demande</label>
                     <select id="subject" name="subject" required>
-                        <!-- <option value="" disabled selected>Choisissez un sujet...</option>
-                        <option value="conseil">Bulle Conseil</option>
-                        <option value="travaux">Bulle Travaux</option>
-                        <option value="axelle">Matériaux / Dabro Concept</option>
-                        <option value="autre">Autre demande</option> -->
                         <option value="" disabled {% if not request.GET.subject %}selected{% endif %}>Choisissez un sujet...</option>
                         <option value="conseil" {% if request.GET.subject == 'conseil' %}selected{% endif %}>Bulle Conseil</option>
                         <option value="travaux" {% if request.GET.subject == 'travaux' %}selected{% endif %}>Bulle Travaux</option>
