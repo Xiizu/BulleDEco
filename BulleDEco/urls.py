@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, re_path
-from pages.views import admin_dashboard_redirect, materiaux, gallery
+from pages.views import admin_dashboard_redirect, materiaux, gallery, legal
 
 urlpatterns = [
     re_path(r'^admin/$', admin_dashboard_redirect),
@@ -24,4 +24,5 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('materiaux/', materiaux, name='materiaux'),
     path('gallery/', gallery, name='gallery'),
+    path('legal/', legal, name='legal'),
 ]

@@ -7,6 +7,9 @@ from .models import ContactMessage
 def home(request):
     return render(request, 'pages/home.html')
 
+def legal(request):
+    return render(request, 'pages/legal.html')
+
 def contact(request):
     if request.method == 'POST':
         name = request.POST.get('name')

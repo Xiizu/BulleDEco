@@ -1,0 +1,75 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block title %}Mentions Légales & CGV - Bulle d'éco{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 4rem 2rem; background: linear-gradient(135deg, var(--clr-light-green) 0%, var(--clr-light-blue) 100%);">
+    <div class="hero-content container" style="max-width: 900px;">
+        <h1>Cadre Juridique</h1>
+        <p class="subtitle">Mentions Légales & Conditions Générales de Vente</p>
+    </div>
+</section>
+
+<section class="container" style="padding: 4rem 2rem; max-width: 900px; line-height: 1.8;">
+    
+    <!-- SECTION 1 : MENTIONS LÉGALES -->
+    <div class="legal-section" style="margin-bottom: 4rem;">
+        <h2 style="text-align: left; border-bottom: 2px solid var(--clr-green); padding-bottom: 0.5rem;">1. Mentions Légales</h2>
+        
+        <div style="margin-top: 1.5rem;">
+            <h3>Éditeur du site</h3>
+            <p>
+                Le site <strong>bulledeco17.souakri.fr</strong> est édité par :<br>
+                <strong>Gwladys Souakri</strong>, Entrepreneur Individuel (EI).<br>
+                Siège social : 3 rue des Boguets, 17600 NIEULLE SUR SEUDRE.<br>
+                SIRET : 91827477000018.<br>
+                Email : <a href="mailto:bulledeco17@gmail.com" style="color: var(--clr-orange);">bulledeco17@gmail.com</a>
+            </p>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+            <h3>Hébergement</h3>
+            <p>
+                Le site est hébergé par la société <strong>OVH Cloud</strong>.<br>
+                Adresse : 2 rue Kellermann, 59100 Roubaix, France.<br>
+                Site web : <a href="https://www.ovhcloud.com" target="_blank" style="color: var(--clr-orange);">www.ovhcloud.com</a>
+            </p>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+            <h3>Propriété intellectuelle</h3>
+            <p>
+                L'ensemble du contenu de ce site (textes, images, logos, visuels 3D) est la propriété exclusive de <strong>Bulle d'éco</strong>, sauf mention contraire. Toute reproduction ou représentation totale ou partielle de ce site par quelque procédé que ce soit, sans l'autorisation expresse de l'éditeur, est interdite.
+            </p>
+        </div>
+    </div>
+
+    <!-- SECTION 2 : CGV -->
+    <div class="cgv-section" id="cgv">
+        <h2 style="text-align: left; border-bottom: 2px solid var(--clr-orange); padding-bottom: 0.5rem;">2. Conditions Générales de Vente</h2>
+        
+        <div style="margin-top: 2rem; padding: 2rem; background-color: #f9f9f9; border-left: 5px solid var(--clr-orange); border-radius: 8px;">
+            <h3 style="color: var(--clr-text);">Mise à jour prochaine</h3>
+            <p>
+                Les Conditions Générales de Vente (CGV) détaillant les modalités de prestations de services, de rétractation et de paiement sont en cours de rédaction et seront publiées très prochainement sur cette page.
+            </p>
+            <p>
+                En attendant, pour toute question relative aux modalités contractuelles, merci de me contacter directement via le <a href="{% url 'contact' %}" style="color: var(--clr-orange); font-weight: bold;">formulaire de contact</a>.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<style>
+    .legal-section h3, .cgv-section h3 {
+        margin-top: 1.5rem;
+        color: var(--clr-green);
+        font-family: var(--font-heading);
+    }
+    .legal-section p, .cgv-section p {
+        margin-bottom: 1rem;
+    }
+</style>
+{% endblock %}
