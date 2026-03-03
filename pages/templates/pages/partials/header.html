@@ -5,7 +5,12 @@
             <img src="{% static 'pages/images/logo-white-rounded.ico' %}" alt="Logo Bulle D'Eco">
             <h1 class="title">Bulle d'éco</h1>
         </a>
-        <ul class="nav-links">
+        <button class="burger-menu" id="burgerToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="/">Accueil</a></li>
             <li><a href="/#prestations">Prestations</a></li>
             <li><a href="{% url 'materiaux' %}">Matériaux</a></li>
@@ -14,3 +19,18 @@
         </ul>
     </nav>
 </header>
+<script>
+    const burgerToggle = document.getElementById('burgerToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    burgerToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        burgerToggle.classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            burgerToggle.classList.remove('open');
+        });
+    });
+</script>

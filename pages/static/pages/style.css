@@ -144,6 +144,34 @@ nav {
     padding: 1rem 2rem;
 }
 
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+}
+
+.burger-menu span {
+    width: 30px;
+    height: 3px;
+    background: var(--clr-orange);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+/* Animation Burger -> Croix */
+.burger-menu.open span:first-child { transform: rotate(45deg); }
+.burger-menu.open span:nth-child(2) { opacity: 0; transform: translateX(20px); }
+.burger-menu.open span:last-child { transform: rotate(-45deg); }
+
 .logo {
     display: flex;
     align-items: center;
@@ -481,6 +509,44 @@ footer {
 /* RESPONSIVE MEDIA QUERIES */
 /* ================================================= */
 @media (max-width: 768px) {
+    .burger-menu {
+        display: flex; /* On affiche le burger sur mobile */
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%; /* Caché à droite */
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.4s ease-in-out;
+        z-index: 1050;
+    }
+
+    .nav-links.active {
+        right: 0; /* On affiche le menu */
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .eco-section, .axelle-section .flex-row {
+        flex-direction: column;
+    }
 
     .eco-section,
     .dabro-section .flex-row {
